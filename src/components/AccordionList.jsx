@@ -1,4 +1,5 @@
 import React from 'react'
+import Accordion from './Accordion';
 
 const AccordionList = () => {
     const languages = [
@@ -38,10 +39,7 @@ const AccordionList = () => {
             <h1>Learn Web Development</h1>
             <div className="accordion">
                 {languages.map((language) => (
-                    <div key={language.id}>
-                        <button className="btn">{language.title}</button>
-                        <p>{language.description}</p>
-                    </div>
+                    <Accordion language={language} />
                 ))}
 
             </div>
