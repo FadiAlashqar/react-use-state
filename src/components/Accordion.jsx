@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Accordion = (props) => {
     const { language } = props
+    const [isOpen, SetIsOpen] = useState(false);
     return (
-        <div key={language.id}>
-            <button className="btn">{language.title}</button>
-            <p>{language.description}</p>
+        <div>
+            <button className="btn" onClick={() => SetIsOpen(!isOpen)}>{language.title}</button>
+            {isOpen && <p>{language.description}</p>}
         </div>
     )
 }

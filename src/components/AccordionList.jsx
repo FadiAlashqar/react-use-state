@@ -39,7 +39,7 @@ const AccordionList = () => {
             <h1>Learn Web Development</h1>
             <div className="accordion">
                 {languages.map((language) => (
-                    <Accordion language={language} />
+                    <Accordion language={language} key={language.id} />
                 ))}
 
             </div>
